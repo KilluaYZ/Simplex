@@ -10,11 +10,9 @@
 
 一般线性规划：
 
-![](file:///C:\Users\29592\AppData\Local\Temp\ksohtml14748\wps1.png)
-
 **问题的输入格式如下：input.txt**
 
- 
+![](img/simplex.png)
 
 1
 
@@ -48,27 +46,25 @@
 
 代码调用：
 
-Simplex_Reader sr("input.txt");
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+try
 
-Simplex_Model sm;
+{
 
-	try
+    sr.readin_info(sm);
 
-	{
+    sm.solve();
 
-		sr.readin_info(sm);
+}
 
-		sm.solve();
+catch (MyException& e)
 
-	}
+{
 
-	catch (MyException& e)
+    cout \<\< e.what() \<\< endl;
 
-	{
-
-		cout \<\< e.what() \<\< endl;
-
-	}
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  
 
@@ -76,7 +72,7 @@ Simplex_Model sm;
 
 整数规划
 
-![](file:///C:\Users\29592\AppData\Local\Temp\ksohtml14748\wps4.png)
+![](img/integer.png)
 
 input.txt
 
@@ -94,25 +90,27 @@ input.txt
 
 代码调用：
 
-	Integer_Model im("input.txt");
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Integer_Model im("input.txt");
 
-	try
+try
 
-	{
+{
 
-		im.solve();
+    im.solve();
 
-		im.print_res();
+    im.print_res();
 
-	}
+}
 
-	catch (MyException& e)
+catch (MyException& e)
 
-	{
+{
 
-		cout \<\< e.what() \<\< endl;
+    cout \<\< e.what() \<\< endl;
 
-	}
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  
 

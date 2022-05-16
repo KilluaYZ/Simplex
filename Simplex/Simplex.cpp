@@ -6,17 +6,17 @@
 int main()
 {
     //std::cout << "Hello World!\n";
-    //Simplex_Reader sr("zhengshu1.txt");
-    //Simplex_Model sm;
-	//try
-	//{
-	//	sr.readin_info(sm);
-	//	sm.solve();
-	//}
-	//catch (MyException& e)
-	//{
-	//	cout << e.what() << endl;
-	//}
+//    Simplex_Reader sr("zhengshu1.txt");
+//    Simplex_Model sm;
+//	try
+//	{
+//		sr.readin_info(sm);
+//		sm.solve();
+//	}
+//	catch (MyException& e)
+//	{
+//		cout << e.what() << endl;
+//	}
 	
 	Integer_Model im("check_input.txt");
 	try
