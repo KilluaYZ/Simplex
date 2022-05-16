@@ -1,0 +1,50 @@
+﻿  Simplex.cpp
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(378,23): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(382,22): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1013,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1136,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1139,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1146,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1174,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1175,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1183,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1208,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1235,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1279,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1124,11): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(903): message : see reference to function template instantiation 'int Simplex_Model::find_vector_max_idx<double>(std::vector<double,std::allocator<double>>)' being compiled
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1128,14): warning C4244: '=': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+  Simplex_Model.cpp
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(378,23): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(382,22): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1013,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1136,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1139,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1146,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1174,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1175,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1183,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1208,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1235,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1279,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1124,11): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(903): message : see reference to function template instantiation 'int Simplex_Model::find_vector_max_idx<double>(std::vector<double,std::allocator<double>>)' being compiled
+C:\Users\29592\Desktop\algorithm\management\Simplex\Simplex\Simplex_Model.h(1128,14): warning C4244: '=': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+  Generating Code...
+  Simplex.vcxproj -> C:\Users\29592\Desktop\algorithm\management\Simplex\Debug\Simplex.exe
