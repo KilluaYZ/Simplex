@@ -719,15 +719,15 @@ public:
 				loose.push_back(arg_num++);
 			}
 		}
-		cout << "添加松弛变量后" << endl;
-		print_form();
+		//cout << "添加松弛变量后" << endl;
+		//print_form();
 		//松弛变量添加完毕
 		//现在检查矩阵中是否有可行的单位矩阵，如果没有，则添加人工变量
 		int こんにちは = 0;
 		check_normal_matrix();
 
-		cout << "添加人工变量后" << endl;
-		print_form();
+		//cout << "添加人工变量后" << endl;
+		//print_form();
 		//计算出非基变量
 		nonbase = get_nonbase();
 
@@ -1009,22 +1009,22 @@ public:
 	}
 
 	void res_only(Result res) {
-		cout << "Only" << endl;
+		cout << "唯一最优解" << endl;
 		print_x_z_res(res);
 	}
 
 	void res_alter(Result res) {
-		cout << "Alternative" << endl;
+		cout << "无穷多最优解" << endl;
 		print_x_z_res(res);
 	}
 
 	void res_unbound(Result res) {
-		cout << "Unbound" << endl;
+		cout << "无界解" << endl;
 		cout << "X* is unbound" << endl << "Z* is unbound." << endl;
 	}
 
 	void res_infeasi(Result res) {
-		cout << "Infeasible" << endl;
+		cout << "无可行解" << endl;
 	}
 
 	void res_null(Result res) {
@@ -1060,6 +1060,7 @@ public:
 			throw MyException(tmp);
 		}
 		int last_out_arg_id = -1;
+		int cnt = 0;
 		while (1) {
 			sigma = cal_sigma(_Wz,_Wbx);	//计算检验数
 			Res_Type res_type = detect_cases(_Wbx,sigma);
@@ -1112,6 +1113,10 @@ public:
 			update_base(change_id);	//更新基变量
 			_Wbx.gauss_elimination(change_id);
 			Wxb = _Wbx;
+			cnt++;
+			if (cnt > 100) {
+				return Result(Infeasible, _Wbx, _Wz, nonbase, base, arti, loose, init, sigma, theta);
+			}
 		}
 	}
 
@@ -1527,6 +1532,7 @@ private:
 	vector<Simplex_Model> res_storage[100];
 	string file_path;
 	Result _integer_optimise_res;
+	static const int MAX_SEARCH_DEPTH = 5;//最多搜索层数
 public:
 	Integer_Model() {
 		
@@ -1574,6 +1580,9 @@ public:
 			Simplex_Model _tmp_model = branch_queue.front();
 			branch_queue.pop();
 			cout << "queue num : " << branch_queue.size() << endl;
+			if (_tmp_model.depth >= MAX_SEARCH_DEPTH) {
+				continue;
+			}
 			_tmp_model.solve();
 			Result _tmp_res = _tmp_model._res;
 			
@@ -1636,7 +1645,7 @@ public:
 		}
 
 		//从不是整数的下标里面随机选一个
-		int rand_idx = non_integer_idx[rand() % non_integer_idx.size()];
+		int rand_idx = non_integer_idx[0];
 		return rand_idx;
 	}
 
@@ -1710,4 +1719,6 @@ public:
 		}
 		return false;
 	}
+
+
 };

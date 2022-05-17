@@ -18,10 +18,11 @@ int main()
 //		cout << e.what() << endl;
 //	}
 	
-	Integer_Model im("check_input.txt");
+	Integer_Model im("final_check.txt");
 	try
 	{
 		im.solve();
+		cout << "整数规划的结果为" << endl;
 		im.print_res();
 	}
 	catch (MyException& e)
